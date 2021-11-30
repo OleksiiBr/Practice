@@ -9,8 +9,8 @@ public class FirstTest {
     public void userCanSearchKeywordWithGoogle(){
         open("http://google.com");
         $(By.name("q")).setValue("Selenide").pressEnter();
-        $(By.name("q")).setValue("OOO").pressEnter();
-
+        $(By.name("q")).setValue("No-No-No").pressEnter();
+        $(By.name("q")).setValue("Go-go-go").pressEnter();
     }
 
 }
