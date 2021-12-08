@@ -1,15 +1,17 @@
+package StraightForward;
+
+import com.codeborne.selenide.Condition;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class FirstTest {
+public class RegTest {
     @Test
     public void UserRegister(){
         open("http://automationpractice.com/index.php");
         $("a.login").click();
-        $("input#email_create").setValue("tastus@gmail.com").pressEnter();
-        sleep (2000);
+        $("input#email_create").setValue("tastus5@gmail.com").pressEnter();
         $("input#id_gender1").click();
         $("input#customer_firstname").setValue("Tastus");
         $("input#customer_lastname").setValue("Tester");
@@ -22,6 +24,6 @@ public class FirstTest {
         $("select#id_state").selectOption(3);
         $("input#phone_mobile").setValue("12345");
         $("button#submitAccount").click();
-        sleep (20000);
+        $("a.logout").shouldBe(Condition.visible).shouldHave(Condition.text("Sign out"));
     }
 }
